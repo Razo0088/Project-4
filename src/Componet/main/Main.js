@@ -20,13 +20,13 @@ export default function Main() {
 
                         <div className='nav_tablo'>
                             <div className='navigation'>
-                                <button onClick={() => { setActiv("Flight") }}>
+                                <button onClick={() => { setActiv("Flight") }} className={activ === "Flight" ? "btn_red" : "" }>
                                     <FaPlane className='FaPlane' /> Flight
                                 </button>
-                                <button onClick={() => { setActiv("hotel") }}>
+                                <button onClick={() => { setActiv("Hotel") }} className={activ === "Hotel" ? "btn_red" : ""}>
                                     <MdHotel className='MdHotel' /> Hotel
                                 </button>
-                                <button onClick={() => { setActiv("rentcar") }}>
+                                <button onClick={() => { setActiv("Rentcar") }} className={activ === "Rentcar" ? "btn_red" : ""}>
                                     <FaCar className='FaCar' /> Rentcar
                                 </button>
                             </div>
@@ -44,7 +44,7 @@ export default function Main() {
                                 )
 
                                 }
-                                {activ === "hotel" && (
+                                {activ === "Hotel" && (
                                     <div className="hotel" >
                                         <h2>Find the best hotels</h2>
                                         <p>Book a hotel with us and get the best fares and promotions.</p>
@@ -53,7 +53,7 @@ export default function Main() {
                                     </div>
                                 )}
                                 {
-                                    activ === "rentcar" && (
+                                    activ === "Rentcar" && (
                                         <div className='retcar'>
                                             <h2>Best car rental in the world!</h2>
                                             <p><span>DISCOUNT!</span>  Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs</p>
