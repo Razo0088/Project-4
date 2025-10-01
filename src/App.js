@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Footer from './Componet/footer/Footer';
+import Header from './Componet/header/Header';
+import Main from './Componet/main/Main';
+import{motion} from "framer-motion"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+   
+      <div className="App">
+        <Header />
+        <Main />
+      
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{once:true,amount:0.3}}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Footer />
+        </motion.div>
+       
+      </div>
+   
+    
   );
 }
 
