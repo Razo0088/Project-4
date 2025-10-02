@@ -76,8 +76,7 @@ main {
 @media (max-width: 768px) {
   .navigation {
     width: 95%;
-    flex-direction: column;
-    gap: 3px;
+    
   }
   .tablo { width: 95%; }
   .inputs { flex-direction: column; gap: 10px; }
